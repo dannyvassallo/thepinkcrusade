@@ -12,6 +12,7 @@
  *
  *= require_normalize
  *= require_tooltipster
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
