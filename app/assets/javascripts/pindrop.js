@@ -190,7 +190,7 @@ Mark Allen
         'destroy_by_id'   : function(id, password, callback){
           if(!password) { return false; }
           callback  = callback || $.noop;
-          $.post('api/v1/pins/destroy/' + id, {destroy_code : password}, function(d){
+          $.post('api/v1/pins/' + id, {destroy_code : password}, function(d){
             if(d && d.success){
               self.track_event("destroy_pin","success");
               alert("The comment has been permenantly deleted");
