@@ -1,6 +1,8 @@
 class Api::V1::PinsController < ApplicationController
 
+  # skip_before_action :verify_authenticity_token
   respond_to :json
+
 
   def index
     @pins = Pin.all
@@ -12,24 +14,20 @@ class Api::V1::PinsController < ApplicationController
   end
 
   def create
-    @pin = Pin.build(pin_params)
-    @pin.save!
-    respond_with @pin
+    @pin = Pin.new(pin_params)
+    if @pin.save
+      render json: @pin
+    end
   end
 
   def destroy
     respond_with Pin.destroy(params[:id])
   end
 
-  def show
-    @pins = Pin.all
-    respond_with @pins
-  end
-
   private
 
   def pin_params
-    params.require(:pin).permit(:pin_pk, :pin_pin_promo_fk, :pin_comment, :pin_first_name, :pin_last_name, :pin_email, :pin_zip, :pin_x, :pin_y, :pin_can_email)
+    params.require(:pin).permit(:pin_pin_promo_fk, :pin_comment, :pin_first_name, :pin_last_name, :pin_email, :pin_zip, :pin_x, :pin_y, :pin_can_email) if params[:pin]
   end
 
 end

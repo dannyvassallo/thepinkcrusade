@@ -89,7 +89,7 @@ Mark Allen
         },
         'create_pin'    : function(pin, callback, error){
           pin = self.new_pin(pin);
-          $.post(myfangate_url + "api/v1/pins/create" + o.promo_id, {pin:pin}, function(d){
+          $.post(myfangate_url + "api/v1/pins/", {pin:pin}, function(d){
             self.debug("create_pin", d);
             if(d && !d.error){
               self.pins.push(d);
@@ -109,12 +109,13 @@ Mark Allen
         'place_pin' : function(pin){
           var pin_dom       = self.new_pin_dom();
           pin_dom.attr("title",pin.pin_first_name + " " + pin.pin_last_name + "\n" + pin.pin_comment);
-          var public_attrs  = ["pin_pk", "pin_first_name", "pin_last_name", "pin_comment"];
+          var public_attrs  = ["id", "pin_first_name", "pin_last_name", "pin_comment"];
           var searchable    = '';
 
           for(var i=0,l=public_attrs.length; i<l; i++){
             var field = public_attrs[i].toLowerCase();
-            var val   = pin[field].toLowerCase();
+            console.log(field);
+            var val   = (pin[field] + "").toLowerCase();
             pin_dom.attr("data-" + field, val);
             searchable += val + ' ';
           }
@@ -147,16 +148,16 @@ Mark Allen
             });
           pin_dom.Touchable();
           pin_dom.bind("longTap",function() {
-            self.destroy_by_id(pin.pin_pk, prompt("Permenantly delete " + pin.pin_first_name + " " + pin.pin_last_name + "'s comment?\n\"" + pin.pin_comment + "\""));
+            self.destroy_by_id(pin.id, prompt("Permenantly delete " + pin.pin_first_name + " " + pin.pin_last_name + "'s comment?\n\"" + pin.pin_comment + "\""));
           });
           pin_dom.bind("mouseover", function() {
             pin_dom.attr("data-user-initiated-hover", true);
-            self.track_event("pin_hover", "pin#" + pin.pin_pk);
+            self.track_event("pin_hover", "pin#" + pin.id);
           });
           pin_dom.bind("tap",function(){});
         },
         'reload'  : function(callback){
-          $.get(myfangate_url + "api/v1/pins/" + o.promo_id, function(d){
+          $.get(myfangate_url + "api/v1/pins/", function(d){
             self.debug("RELOAD PINS", d);
             self.pins = d;
             $.isFunction(callback) && callback(d);
@@ -189,11 +190,11 @@ Mark Allen
         'destroy_by_id'   : function(id, password, callback){
           if(!password) { return false; }
           callback  = callback || $.noop;
-          $.post('api/v1/pins/destroy' + id, {destroy_code : password}, function(d){
+          $.post('api/v1/pins/destroy/' + id, {destroy_code : password}, function(d){
             if(d && d.success){
               self.track_event("destroy_pin","success");
               alert("The comment has been permenantly deleted");
-              $(".pin.state-pinned[data-pin_pk=" + id + "]").fadeOut(function(){
+              $(".pin.state-pinned[data-id=" + id + "]").fadeOut(function(){
                 $(this).remove();
                 callback();
               });
@@ -209,7 +210,7 @@ Mark Allen
         'find_by_id'      : function(id){
           /* fade out any pins that don't match the q string */
           for(var i=0, l=self.pins.length; i<l; i++){
-            if(self.pins[i].pin_pk == id) return self.pins[i];
+            if(self.pins[i].id == id) return self.pins[i];
           }
           return null;
         },
@@ -297,7 +298,7 @@ Mark Allen
         /*if(o["start_opened"]){
           var found = promo.find_by_id(o["start_opened"]);
           if(found){
-            $(".pin[data-pin_pk]").tooltipsy();
+            $(".pin[data-id]").tooltipsy();
           }
         }*/
       });

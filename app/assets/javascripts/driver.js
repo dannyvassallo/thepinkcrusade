@@ -112,7 +112,7 @@ Mark Allen
       var args    = $.extend(share_args,{
         utm_source  : social,
         utm_content : mine ? "own" : "other",
-        pin         : pin.pin_pk
+        pin         : pin.id
       });
       var share_link  = promo_link + $.concatArgs(args);
 
@@ -158,7 +158,7 @@ Mark Allen
 
       /* return the element to place inside the tooltip  */
       generate_tooltip  : function(pin){
-        var tooltip_container = $('<div class="tooltip-container" data-pin_pk="' + pin.pin_pk + '"/>');
+        var tooltip_container = $('<div class="tooltip-container" data-id="' + pin.id + '"/>');
         var twitter_btn       = $("<a href='#' class='social-link social-twitter' data-social='twitter'><div class='social-img'></div></a>");
         var facebook_btn      = $("<a href='#' class='social-link social-facebook' data-social='facebook'><div class='social-img'></div></a>");
         var floater           = $('<span class="tooltip-right"/>');
@@ -185,7 +185,7 @@ Mark Allen
         if(start_opened){
           var found = promo.find_by_id(start_opened);
           if(found){
-            $(".pin.state-pinned[data-pin_pk=" + found.pin_pk + "]").tooltipster('show');
+            $(".pin.state-pinned[data-id=" + found.id + "]").tooltipster('show');
           }
         }
       },
