@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rotr15</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <!-- Bootstrap Modal Only -->
+  <%= javascript_include_tag "bootstrap-modal.js" %>
+  <!-- Tooltipster -->
+  <%= javascript_include_tag "tooltipster.js" %>
+  <!-- Touchable -->
+  <%= javascript_include_tag "touchable.js" %>
+  <%= javascript_include_tag "hoverable.js" %>
+  <!-- pindrop script -->
+  <%= javascript_include_tag "pindrop.js" %>
+  <script type="text/javascript">window.pin_promo_id  = 2;</script>
+  <%= javascript_include_tag "driver.js" %>
+</body>
+</html>

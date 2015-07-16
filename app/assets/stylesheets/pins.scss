@@ -1,0 +1,599 @@
+html, body{
+  width:810px;
+  max-width:810px;
+  background: #7eacdd;
+  /*overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;*/
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+#gate{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:99999999;
+  background-image:url('//s3.amazonaws.com/myfangate.com/rotr/img/background-like-repeat.png');
+}
+.gate-image{
+  width:96%;
+  position:relative;
+  top:25px;
+  text-align:right
+}
+
+.container{
+  padding-bottom:100px;
+  width: 810px;
+  overflow:hidden;
+}
+
+.banner{
+  width:810px;
+  height:200px;
+  background: url('//s3.amazonaws.com/myfangate.com/rotr/img/header-rotr.png');
+  background-size:contain;
+}
+
+.banner-link{
+  width: 160px;
+  display: block;
+  height: 150px;
+}
+
+.searchbar{
+  position:fixed;
+  height: 60px;
+  /*background: #0d0d0d;*/
+  background-color: rgba(0, 0, 0, 0);
+  top: 0;
+  left: 0;
+  padding: 0 !important;
+  width: 810px;
+  z-index: 99;
+}
+.searchbar-contents{
+  padding: 10px 10px 0 10px;
+  width: 790px;
+}
+.donate{
+  background-image:url('//s3.amazonaws.com/myfangate.com/rotr/img/home-donate-button.jpg');
+  background-repeat:no-repeat;
+  width:163px;
+  height:39px;
+}
+.pull-right{
+  float:right;
+  position: relative;
+  top: -5px;
+  margin-right: 16px;
+}
+.searchform{
+  position: absolute;
+  top: 10px;
+  left: 8%;
+  width: 60%;
+}
+
+.searchbar-contents img{
+  padding-left: 10px;
+}
+.steps .steps-image{
+  display:block;
+  height:54px;
+  background:url(//s3.amazonaws.com/myfangate.com/rotr/img/steps.png) no-repeat top center;
+}
+.searchfield{
+  height: 35px;
+  background: none;
+  border: none;
+  width:100%;
+  font-size: 32px;
+  line-height: 32px;
+  /*color: #666;*/
+  color:whitesmoke;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #666;
+  border-bottom: none;
+}
+
+.searchfield:focus{
+  color: white;
+  outline: none;
+}
+
+.background{
+  background: url('//s3.amazonaws.com/myfangate.com/rotr/img/railing.png') no-repeat;
+  height: 514px;
+  overflow:hidden;
+  padding:0 10px;
+  position: relative;
+}
+
+.drag{
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 290px;
+}
+
+.ribbonbar{
+  position: fixed;
+  bottom: 0;
+  z-index:999;
+  height: 105px;
+
+  width: 790px;
+  padding: 0 10px 10px 10px;
+
+  background-color:#7eacdd;
+  background-repeat:no-repeat;
+  /*background-image:url(/ci/assets/js/custom_tab_scripts/pindrop/img/footer.png);*/
+  /*border-top: 1px solid #1b1b1b;*/
+}
+
+
+.ribbonbar h1{
+  margin: 0;
+  padding-top: 25px;
+}
+
+.ribbonbar p{
+  margin: 0;
+}
+
+.bar {
+  width: 550px;
+  margin: 0 auto;
+  padding:20px;
+  user-select:none;
+  -webkit-user-select: none;
+}
+
+.instruction {
+  float: right;
+}
+
+.ribbon{
+  float: left;
+  text-align: right;
+  width:45px;
+
+  user-select:none;
+  -webkit-user-select: none;
+}
+.ribbon img{
+}
+
+/**
+*   Modal
+*/
+
+button{
+  background: #1b1b1b;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button:hover{
+  background: #2b2b2b;
+}
+
+.submitRibbon{
+  background: #2b2b2b;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+button:hover{
+  background: #1b1b1b;
+}
+
+/* hide modals */
+#info, #share{
+  display:none;
+}
+
+.info{
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.info input, .info textarea{
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+  padding: 2pt 6pt;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 14pt;
+  color: grey;
+  border-bottom: 1px solid grey;
+  font-weight: bold;
+}
+.info textarea{
+  border: 1px solid grey;
+  min-height:60px;
+  font-size:13pt;
+}
+.info input:focus, .info textarea:focus{
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+
+.fullwidth{
+  width:100%;
+  max-width: 100%;
+  padding-left:0;
+  padding-right:0;
+}
+.fullwidth.padded{
+  width:96%;
+  max-width: 96%;
+  padding-left:2%;
+  padding-right:2%;
+}
+
+
+input[type='agree']{
+  margin-left: 10px;
+  float: left;
+  font-size: 14px;
+}
+
+input[type='submit']{
+  background: #3b3b3b;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px #333;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  float: right;
+}
+
+
+.agree{
+  margin-top: 8px;
+}
+label.checkbox-label{
+  font-size:70%;
+}
+.agree span{
+  margin-left: 10px;
+}
+
+.agree span a{
+  margin-left: 2px;
+  margin-right: 2px;
+  color: #666;
+  text-decoration: none;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  opacity: 0;
+}
+
+.modal-backdrop,
+.modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  margin-left: -280px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: none;
+}
+
+.shadow {
+    border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  /* IE6-7 */
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+#share{
+  text-align: center;
+}
+
+.modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+  top: -50%;
+}
+
+.modal.fade.in {
+  top: 10%;
+}
+
+.modal-header {
+  padding: 9px 15px;
+  background: #000000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.modal-header .close {
+  margin-top: 2px;
+  float: right;
+  background: #1b1b1b;
+  border: none;
+  color: #ffffff;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal-header .close:hover {
+  background: #2b2b2b;
+}
+
+.modal-header h3 {
+  margin: 0;
+  line-height: 30px;
+}
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+  padding-top:0;
+  background: #1b1b1b;
+}
+.modal-form {
+  margin-bottom: 0;
+}
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  font-size:70%;
+  text-align: right;
+  background-color: #000000;
+  border-top: 1px solid #2a2a2a;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+
+  *zoom: 1;
+}
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.modal-footer:after {
+  clear: both;
+}
+
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+
+
+
+.drag.state-active, .drag.state-hover{
+  margin: -3px;
+  border-width: 3px;
+  border-style: dashed;
+  color: whitesmoke;
+}
+.drag.state-active{
+  border-color: grey;
+}
+.drag.state-hover{
+  border-color: whitesmoke;
+}
+.ui-draggable{
+  cursor:move;
+}
+
+.drag.state-active .droppable-inner:before{
+  content: "DROP HERE";
+}
+.drag.state-active .droppable-inner{
+  z-index:99999;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 24pt;
+  font-family: monospace;
+  font-weight:bold;
+  margin-top: -12pt;
+  text-shadow: 1px 1px 2px #000000;
+  filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+
+.pin.state-pinned{
+  display:block;
+  position:absolute;
+  cursor:pointer;
+  width:28px;
+  height:54px;
+  display:block;
+  margin:0;
+  padding:0;
+  background-repeat:no-repeat;
+  background-size:contain;
+  user-select:none;
+  -webkit-user-select: none;
+}
+.pin img{
+  display:block;
+  width:28px;
+  height:54px;
+  margin:0;
+  padding:0;
+}
+
+.tooltipster-arrow{
+}
+.tooltipster-base{
+  border-width:2px;
+  margin:-2px;
+  z-index: 998 !important;
+}
+
+.tooltip-container{
+  display:block;
+  text-align:left;
+  position:relative;
+  min-width:250px;
+  font-size:12pt;
+  padding-right: 125px;
+}
+.tooltip-container p{
+  padding:0;
+  text-align:left;
+  font-size:13pt;
+  margin-top: 4pt;
+  margin-bottom: 4pt;
+}
+h1, h2, h3{
+  color:#B1B1B1;
+  text-align:left;
+}
+h2{
+  font-size: 1.5em;
+  padding:0;
+  padding-top: 5px;
+  margin-top:0;
+}
+.tooltip-container .tooltip-right{
+  position:absolute;
+  top:0;
+  right: 0;
+}
+.tooltip-container .tooltip-right .social-link,
+.tooltip-container .tooltip-right .social-link .social-img{
+  display: block;
+  width: 57px;
+  height: 57px;
+  background-size: 57px 57px;
+  background-repeat:no-repeat;
+}
+.tooltip-container .tooltip-right .social-link.social-facebook .social-img{
+  background-image:url('//s3.amazonaws.com/myfangate.com/assets/images/invite_contest_buttons/social_buttons/fbshare_regular.png');
+}
+.tooltip-container .tooltip-right .social-link.social-facebook .social-img:hover{
+  background-image:url('//s3.amazonaws.com/myfangate.com/assets/images/invite_contest_buttons/social_buttons/fbshare_hover.png');
+}
+.tooltip-container .tooltip-right .social-link.social-twitter .social-img{
+  background-image:url('//s3.amazonaws.com/myfangate.com/assets/images/invite_contest_buttons/social_buttons/tweet_regular.png');
+}
+.tooltip-container .tooltip-right .social-link.social-twitter .social-img:hover{
+  background-image:url('//s3.amazonaws.com/myfangate.com/assets/images/invite_contest_buttons/social_buttons/tweet_hover.png');
+}
+.tooltip-container .tooltip-right .social-link{
+  float:right;
+  margin-left:9px;
+}
+.tooltip-container .tooltip-right .social-link img{
+}
+.input-description{
+  font-size:10pt;
+  float:right;
+}
