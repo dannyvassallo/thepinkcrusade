@@ -20,10 +20,6 @@ class Api::V1::PinsController < ApplicationController
     end
   end
 
-  def destroy
-    respond_with Pin.destroy(params[:id])
-  end
-
   private
 
   def pin_params

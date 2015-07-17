@@ -147,9 +147,9 @@ Mark Allen
               }
             });
           pin_dom.Touchable();
-          pin_dom.bind("longTap",function() {
-            self.destroy_by_id(pin.id, prompt("Permenantly delete " + pin.pin_first_name + " " + pin.pin_last_name + "'s comment?\n\"" + pin.pin_comment + "\""));
-          });
+          // pin_dom.bind("longTap",function() {
+          //   self.destroy_by_id(pin.id, prompt("Permenantly delete " + pin.pin_first_name + " " + pin.pin_last_name + "'s comment?\n\"" + pin.pin_comment + "\""));
+          // });
           pin_dom.bind("mouseover", function() {
             pin_dom.attr("data-user-initiated-hover", true);
             self.track_event("pin_hover", "pin#" + pin.id);
@@ -187,26 +187,26 @@ Mark Allen
             }
           }
         },
-        'destroy_by_id'   : function(id, password, callback){
-          if(!password) { return false; }
-          callback  = callback || $.noop;
-          $.post('api/v1/pins/' + id, {destroy_code : password}, function(d){
-            if(d && d.success){
-              self.track_event("destroy_pin","success");
-              alert("The comment has been permenantly deleted");
-              $(".pin.state-pinned[data-id=" + id + "]").fadeOut(function(){
-                $(this).remove();
-                callback();
-              });
-            }else{
-              self.track_error("destroy_pin", "fail#" + d.error);
-              PinPromo.oops(d.error ? d.error : "Something went wrong.. ");
-            }
-          },"JSON").error(function(d){
-            self.track_error("destroy_pin", d.status + "#" + d.statusText);
-            self.debug("destroy error", d);
-          });
-        },
+        // 'destroy_by_id'   : function(id, password, callback){
+        //   if(!password) { return false; }
+        //   callback  = callback || $.noop;
+        //   $.post('api/v1/pins/' + id, {destroy_code : password}, function(d){
+        //     if(d && d.success){
+        //       self.track_event("destroy_pin","success");
+        //       alert("The comment has been permenantly deleted");
+        //       $(".pin.state-pinned[data-id=" + id + "]").fadeOut(function(){
+        //         $(this).remove();
+        //         callback();
+        //       });
+        //     }else{
+        //       self.track_error("destroy_pin", "fail#" + d.error);
+        //       PinPromo.oops(d.error ? d.error : "Something went wrong.. ");
+        //     }
+        //   },"JSON").error(function(d){
+        //     self.track_error("destroy_pin", d.status + "#" + d.statusText);
+        //     self.debug("destroy error", d);
+        //   });
+        // },
         'find_by_id'      : function(id){
           /* fade out any pins that don't match the q string */
           for(var i=0, l=self.pins.length; i<l; i++){

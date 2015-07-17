@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :pins
+  resources :pinmanager
   root to: 'pins#index'
 
 
   namespace :api do
     namespace :v1 do
-      resources :pins, only: [:new, :create, :destroy, :index]
+      resources :pins, only: [:new, :create, :index]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
