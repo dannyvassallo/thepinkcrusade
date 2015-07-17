@@ -1,3 +1,7 @@
+// fix modal
+$('#info').appendTo("body");
+
+
 // INIT UNOBTRUSIVE FLASH
 
 flashHandler = function(e, params) {
