@@ -1,6 +1,4 @@
 html, body{
-  width:810px;
-  max-width:810px;
   background: #7eacdd;
   /*overflow-y: scroll;
   overflow-x: hidden;
@@ -93,7 +91,7 @@ img{
 .steps .steps-image{
   display:block;
   height:54px;
-  background:url(//s3.amazonaws.com/myfangate.com/rotr/img/steps.png) no-repeat top center;
+  background:url('//s3.amazonaws.com/myfangate.com/rotr/img/steps.png') no-repeat top center;
 }
 .searchfield{
   height: 35px;
@@ -596,4 +594,34 @@ h2{
 .input-description{
   font-size:10pt;
   float:right;
+}
+
+// PIN MANAGER
+#pin-manager-table{
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  font-size: 12px;
+  max-width: 1170px;
+
+  .remove-btn{
+    background-color: #931212 !important;
+    width: 100%;
+  }
+
+  tr{
+    padding: 10px;
+  }
+
+  tr:nth-child(even) {
+    background-color: white;
+    color: black;
+  }
+
+
+  tr:nth-child(odd) {
+    background-color: #ccc;
+    color: black;
+  }
+
 }

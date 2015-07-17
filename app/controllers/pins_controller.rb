@@ -1,8 +1,13 @@
 class PinsController < ApplicationController
 
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
+  respond_to :html, :js
 
   def index
+    @pins = Pin.all
+  end
+
+  def manage_pins
     @pins = Pin.all
   end
 
@@ -16,7 +21,19 @@ class PinsController < ApplicationController
   end
 
   def destroy
-    Pin.destroy(params[:id])
+    @pin = Pin.find(params[:id])
+
+    if @pin.destroy
+      flash[:notice] = "Item was deleted."
+
+    else
+      flash[:error] = "Error deleting item. Please try again."
+    end
+
+    respond_with(@pin) do |format|
+      format.html { redirect_to root_path }
+    end
+
   end
 
   def show

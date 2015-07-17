@@ -23,11 +23,11 @@ Mark Allen
     window._gaq = window._gaq || {push:function(){}};
 
     /* test delete */
-    window.pin_delete = function(id, pw){
-      promo.destroy_by_id(id, pw, function(){
-        promo.close_tooltips();
-      });
-    }
+    // window.pin_delete = function(id, pw){
+    //   promo.destroy_by_id(id, pw, function(){
+    //     promo.close_tooltips();
+    //   });
+    // }
 
 
     /* trackers */
