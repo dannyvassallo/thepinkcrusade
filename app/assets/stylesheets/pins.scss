@@ -1,19 +1,47 @@
 html, body{
-  background: #7eacdd;
-  /*overflow-y: scroll;
+  background: black;
+  height: 100% !important;
+  overflow-y: scroll;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;*/
+  -webkit-overflow-scrolling: touch;
 }
 body{
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
-  overflow-x:hidden;
+  // overflow-x:hidden;
+  background-image: url('https://s3.amazonaws.com/myfangate.com/rotr15/repeatingbg.png');
+  background-repeat: repeat;
 }
 
 img{
   max-width:100%;
+}
+
+#white-bg{
+  width: 810px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  margin-left: -412px;
+  z-index: 2;
+}
+
+#yellow-bg{
+  width: 860px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fddc03;
+  position: absolute;
+  left: 50%;
+  margin-left: -430px;
+  z-index: 1;
+  -moz-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
 }
 
 #gate{
@@ -37,19 +65,22 @@ img{
   width: 810px;
   overflow:hidden;
   margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
 }
 
 .banner{
   width:810px;
-  height:200px;
-  background: url('//s3.amazonaws.com/myfangate.com/rotr/img/header-rotr.png');
+  height:350px;
+  background: url('https://s3.amazonaws.com/myfangate.com/rotr15/rotr15-header.png');
   background-size:contain;
 }
 
 .banner-link{
-  width: 160px;
+  width: 300px;
   display: block;
-  height: 150px;
+  height: 300px;
 }
 
 .searchbar{
@@ -57,7 +88,7 @@ img{
   height: 60px;
   left: auto;
   background-color: rgba(0, 0, 0, 0);
-  top: 0;
+  top: 297px;
   padding: 0 !important;
   width: 810px;
   z-index: 99;
@@ -67,7 +98,7 @@ img{
   width: 790px;
 }
 .donate{
-  background-image:url('//s3.amazonaws.com/myfangate.com/rotr/img/home-donate-button.jpg');
+  background-image:url('https://s3.amazonaws.com/myfangate.com/rotr15/donate.png');
   background-repeat:no-repeat;
   width:163px;
   height:39px;
@@ -91,7 +122,7 @@ img{
 .steps .steps-image{
   display:block;
   height:54px;
-  background:url('//s3.amazonaws.com/myfangate.com/rotr/img/steps.png') no-repeat top center;
+  background:url('https://s3.amazonaws.com/myfangate.com/rotr15/steps.png') no-repeat top center;
 }
 .searchfield{
   height: 35px;
@@ -101,7 +132,7 @@ img{
   font-size: 32px;
   line-height: 32px;
   /*color: #666;*/
-  color:whitesmoke;
+  color:#8d86c0 !important;
   font-weight: bold;
   padding-bottom: 5px;
   border-bottom: 1px solid #666;
@@ -114,7 +145,7 @@ img{
 }
 
 .background{
-  background: url('//s3.amazonaws.com/myfangate.com/rotr/img/railing.png') no-repeat;
+  background: url('https://s3.amazonaws.com/myfangate.com/rotr15/chicken-wire.png') no-repeat;
   height: 514px;
   overflow:hidden;
   padding:0 10px;
@@ -137,7 +168,7 @@ img{
   width: 790px;
   padding: 0 10px 10px 10px;
 
-  background-color:#7eacdd;
+  background-color:#fff;
   background-repeat:no-repeat;
   /*background-image:url(/ci/assets/js/custom_tab_scripts/pindrop/img/footer.png);*/
   /*border-top: 1px solid #1b1b1b;*/
