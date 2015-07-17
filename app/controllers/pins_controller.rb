@@ -34,6 +34,7 @@ class PinsController < ApplicationController
       format.html { redirect_to pinmanager_index_path }
     end
 
+    authorize @pin
   end
 
   def show
