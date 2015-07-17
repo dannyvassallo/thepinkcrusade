@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   resources :pins
   resources :pinmanager
   root to: 'pins#index'

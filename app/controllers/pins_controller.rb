@@ -31,7 +31,7 @@ class PinsController < ApplicationController
     end
 
     respond_with(@pin) do |format|
-      format.html { redirect_to root_path }
+      format.html { redirect_to pinmanager_index_path }
     end
 
   end

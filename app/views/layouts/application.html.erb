@@ -28,7 +28,6 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 <body>
-
 <%= yield %>
   <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
   <!-- Bootstrap Modal Only -->
@@ -42,5 +41,7 @@
   <%= javascript_include_tag "pindrop.js" %>
   <script type="text/javascript">window.pin_promo_id  = 2;</script>
   <%= javascript_include_tag "driver.js" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </body>
 </html>
