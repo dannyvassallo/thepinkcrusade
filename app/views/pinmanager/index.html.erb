@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
   <div id="admin-nav">
-    <%= button_to('Homepage',root_path) %>
-    <%= button_to 'Download CSV list', pins_path(format: :csv) %>
-    <%= button_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <%= link_to('Homepage',root_path) %>
+    <%= link_to 'Download CSV list', pins_path(format: :csv) %>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   </div>
 <% end %>
 
