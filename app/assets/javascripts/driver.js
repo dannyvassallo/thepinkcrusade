@@ -1,3 +1,13 @@
+// INIT UNOBTRUSIVE FLASH
+
+flashHandler = function(e, params) {
+  alert(params.message);
+};
+
+$(window).bind('rails:flash', flashHandler);
+
+
+// BEGIN DRIVER
 /*
 Mark Allen
 2013
