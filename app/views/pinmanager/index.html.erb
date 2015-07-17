@@ -1,8 +1,9 @@
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Homepage',root_path) %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
+  <div id="admin-nav">
+    <%= button_to('Homepage',root_path) %>
+    <%= button_to 'Download CSV list', pins_path(format: :csv) %>
+    <%= button_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </div>
 <% end %>
 
 <h1>Roll Out The Ribbons Pin Manager</h1>
@@ -41,5 +42,4 @@
 <% else %>
   <p>There are no pins containing the term(s) <%= params[:search] %>.</p>
 <% end %>
-
 <%= will_paginate @pins %>
