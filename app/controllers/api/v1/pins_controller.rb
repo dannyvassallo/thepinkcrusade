@@ -17,6 +17,7 @@ class Api::V1::PinsController < ApplicationController
     @pin = Pin.new(pin_params)
     if @pin.save
       render json: @pin
+      PinMailer.posted_confirmation(@pin).deliver
     end
   end
 
