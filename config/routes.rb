@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'status/index'
+
   devise_for :users
   resources :pins
   resources :pinmanager
+  resources :status, only: [:index]
   root to: 'pins#index'
 
 
