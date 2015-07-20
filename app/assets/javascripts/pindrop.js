@@ -6,7 +6,7 @@ Mark Allen
 
 (function($,doc){
   var promo_objects = [];
-  var myfangate_url = "https://rotr15.herokuapp.com/"; // "//myfangate.com/ci/";
+  var myfangate_url = "//rotr15.herokuapp.com/"; // "//myfangate.com/ci/";
   // console.log(myfangate_url);
   var PinPromo = {
     'oops'    : function(msg){
