@@ -61,5 +61,21 @@
   <%= javascript_include_tag "pindrop.js" %>
   <script type="text/javascript">window.pin_promo_id  = 2;</script>
   <%= javascript_include_tag "driver.js" %>
+
+  <script>
+    function stickyScroll(){
+      if  ($('.container').scrollTop() > $('#sticky-search').offset().top) {
+        $('.searchbar').css({'position':'fixed','top':'0'});
+      }
+      else{
+        $('.searchbar').css({'position':'absolute','top':'290px'});
+      }
+    }
+    $(function(){
+      $('body').scroll(function(){
+        stickyScroll();
+      });
+    });
+  </script>
 </body>
 </html>

@@ -84,11 +84,11 @@ img{
 }
 
 .searchbar{
-  position:fixed;
+  position: absolute;
   height: 60px;
   left: auto;
   background-color: rgba(0, 0, 0, 0);
-  top: 297px;
+  top: 290px;
   padding: 0 !important;
   width: 810px;
   z-index: 99;

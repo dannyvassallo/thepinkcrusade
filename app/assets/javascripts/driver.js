@@ -253,24 +253,27 @@ Mark Allen
     /* .. search .. */
 
 
-    /* search_bar fixed */
-    window.$window  = $(window);
-    var searchbar_scrolltop   = search_bar.offset().top;
-    var ribbonbar_scrolltop   = ribbonbar.offset().top;
-    $window.scroll(function(e){
-      if ($window.scrollTop() > searchbar_scrolltop) {
-        search_bar.css({
-          position: 'fixed',
-          top: 0
-        });
-      }else{
-        search_bar.css({
-          position: 'absolute',
-          top: searchbar_scrolltop
-        });
-      }
-      //promo.debug(searchbar_scrolltop);
-    });
+    // /* search_bar fixed */
+    // window.$window  = $(window);
+    // var searchbar_scrolltop   = search_bar.offset().top;
+    // var ribbonbar_scrolltop   = ribbonbar.offset().top;
+    // $window.scroll(function(e){
+    //   if ($window.scrollTop() > searchbar_scrolltop) {
+    //     search_bar.css({
+    //       position: 'fixed',
+    //       top: 0
+    //     });
+    //   }else{
+    //     search_bar.css({
+    //       position: 'absolute',
+    //       top: searchbar_scrolltop
+    //     });
+    //   }
+    //   //promo.debug(searchbar_scrolltop);
+    // });
+
+
+
 
     var hide_search_bar = function(){
       search_bar.slideUp();

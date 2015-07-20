@@ -16,4 +16,3 @@ Rails.application.config.assets.precompile += %w( touchable.js )
 Rails.application.config.assets.precompile += %w( hoverable.js )
 Rails.application.config.assets.precompile += %w( pindrop.js )
 Rails.application.config.assets.precompile += %w( driver.js )
-
