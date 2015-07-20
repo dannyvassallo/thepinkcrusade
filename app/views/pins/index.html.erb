@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+  <div id="logout-float">
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </div>
+<% end %>
   <!-- START COPY -->
 <div id="white-bg"></div>
 <div id="yellow-bg"></div>

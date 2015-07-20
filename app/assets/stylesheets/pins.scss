@@ -701,3 +701,47 @@ h2{
     color: black;
   }
 }
+
+// login
+#login, #register{
+  background-color: white;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 50px auto;
+  color: black;
+  h2{
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    max-width: 600px;
+  }
+  form{
+    margin: 0 auto;
+    max-width: 600px;
+    input{
+      width: 100%;
+    }
+  }
+  input[type="submit"]{
+    float: none !important;
+  }
+  input[type="checkbox"]{
+    width: 20px;
+  }
+  input{
+    margin-bottom: 10px;
+  }
+  #devise-links{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    max-width: 600px;
+  }
+}
+
+#logout-float{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
