@@ -1,45 +1,52 @@
-<% if user_signed_in? %>
-  <div id="admin-nav">
-    <%= link_to('Homepage',root_path) %>
-    <%= link_to 'Download CSV list', pins_path(format: :csv) %>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </div>
-<% end %>
+<br>
+<div id="pin-manager">
 
-<h1>Roll Out The Ribbons Pin Manager</h1>
-
-<%= form_tag(pinmanager_index_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Pins" %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-
-<% if @pins.present? %>
-  <table id="pin-manager-table">
-    <tr>
-      <td>Pin ID:</td>
-      <td>First Name:</td>
-      <td>Last Name:</td>
-      <td>Email:</td>
-      <td>Can Email:</td>
-      <td>Comment:</td>
-      <td>Zip Code:</td>
-      <td>Delete:</td>
-    </tr>
-  <% @pins.each do |pin| %>
-    <tr>
-      <td><%= pin.id %></td>
-      <td><%= pin.pin_first_name %></td>
-      <td><%= pin.pin_last_name %></td>
-      <td><%= pin.pin_email %></td>
-      <td><%= pin.pin_can_email %></td>
-      <td><%= pin.pin_comment %></td>
-      <td><%= pin.pin_zip %></td>
-      <td><%= button_to 'REMOVE PIN', pin, method: :delete, data: {confirm: "Do you really want to delete the pin from #{pin.pin_first_name}, created at #{pin.created_at}?"}, :class => 'remove-btn' %></td>
-    </tr>
+  <% if user_signed_in? %>
+    <div id="admin-nav">
+      <%= link_to('Homepage',root_path) %>
+      <%= link_to 'Download CSV list', pins_path(format: :csv) %>
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    </div>
   <% end %>
-  </table>
-<% else %>
-  <p>There are no pins containing the term(s) <%= params[:search] %>.</p>
-<% end %>
-<%= will_paginate @pins %>
+
+  <h1>Roll Out The Ribbons Pin Manager</h1>
+  <div id="search-wrapper">
+    <%= form_tag(pinmanager_index_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Pins" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+  </div>
+
+
+  <% if @pins.present? %>
+    <table id="pin-manager-table">
+      <tr>
+        <td>Pin ID:</td>
+        <td>First Name:</td>
+        <td>Last Name:</td>
+        <td>Email:</td>
+        <td>Can Email:</td>
+        <td>Comment:</td>
+        <td>Zip Code:</td>
+        <td>Delete:</td>
+      </tr>
+    <% @pins.each do |pin| %>
+      <tr>
+        <td><%= pin.id %></td>
+        <td><%= pin.pin_first_name %></td>
+        <td><%= pin.pin_last_name %></td>
+        <td><%= pin.pin_email %></td>
+        <td><%= pin.pin_can_email %></td>
+        <td><%= pin.pin_comment %></td>
+        <td><%= pin.pin_zip %></td>
+        <td><%= button_to 'REMOVE PIN', pin, method: :delete, data: {confirm: "Do you really want to delete the pin from #{pin.pin_first_name}, created at #{pin.created_at}?"}, :class => 'remove-btn' %></td>
+      </tr>
+    <% end %>
+    </table>
+  <% else %>
+    <p>There are no pins containing the term(s) <%= params[:search] %>.</p>
+  <% end %>
+  <div id="will">
+    <%= will_paginate @pins %>
+  </div>
+</div>

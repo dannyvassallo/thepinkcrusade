@@ -1,6 +1,6 @@
 // fix modal
 $('#info').appendTo("body");
-
+$('#share').appendTo("body");
 
 // INIT UNOBTRUSIVE FLASH
 
@@ -68,7 +68,7 @@ Mark Allen
       });
     }
 
-    var promo_link    = "http://fngt.it/RollOutTheRibbons";
+    var promo_link    = "http://fngt.it/RollOutTheRibbons15";
 
     var share_args    = {
       'utm_campaign': "ROR",
