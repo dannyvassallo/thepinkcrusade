@@ -31,10 +31,10 @@ class PinsController < ApplicationController
     @pin = Pin.find(params[:id])
 
     if @pin.destroy
-      flash[:notice] = "Item was deleted."
+      flash[:notice] = "Pin was deleted."
 
     else
-      flash[:error] = "Error deleting item. Please try again."
+      flash[:error] = "Error deleting pin. Please try again."
     end
 
     respond_with(@pin) do |format|

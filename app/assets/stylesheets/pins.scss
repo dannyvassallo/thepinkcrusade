@@ -37,7 +37,7 @@ img{
   background-color: #fddc03;
   position: absolute;
   left: 50%;
-  margin-left: -430px;
+  margin-left: -437px;
   z-index: 1;
   -moz-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
@@ -84,11 +84,11 @@ img{
 }
 
 .searchbar{
-  position:fixed;
+  position: absolute;
   height: 60px;
   left: auto;
   background-color: rgba(0, 0, 0, 0);
-  top: 297px;
+  top: 290px;
   padding: 0 !important;
   width: 810px;
   z-index: 99;
@@ -154,9 +154,9 @@ img{
 
 .drag{
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   width: 100%;
-  height: 290px;
+  height: 400px;
 }
 
 .ribbonbar{
@@ -273,8 +273,8 @@ button:hover{
   font-size:13pt;
 }
 .info input:focus, .info textarea:focus{
-  color: whitesmoke;
-  border-color: whitesmoke;
+  color: #56575a;
+  border-color: #56575a;
 }
 
 .fullwidth{
@@ -298,13 +298,13 @@ input[type='agree']{
 }
 
 input[type='submit']{
-  background: #3b3b3b;
-  border-top: 1px solid #000000;
-  border-left: 1px solid #000000;
-  border-bottom: 1px solid #2a2a2a;
-  border-right: 1px solid #2a2a2a;
+  background: #8d86c0;
+  border-top: 1px solid #8d86c0;
+  border-left: 1px solid #8d86c0;
+  border-bottom: 1px solid #8d86c0;
+  border-right: 1px solid #8d86c0;
   color: #ffffff;
-  text-shadow: 1px 1px 1px #333;
+  // text-shadow: 1px 1px 1px #333;
   font-size: 18px;
   cursor: pointer;
   padding: 5px;
@@ -317,6 +317,7 @@ input[type='submit']{
 }
 label.checkbox-label{
   font-size:70%;
+  color: #56575a !important;
 }
 .agree span{
   margin-left: 10px;
@@ -325,8 +326,9 @@ label.checkbox-label{
 .agree span a{
   margin-left: 2px;
   margin-right: 2px;
-  color: #666;
+  color: #56575a;
   text-decoration: none;
+
 }
 
 .clearfix {
@@ -409,7 +411,11 @@ label.checkbox-label{
 }
 
 #share{
-  text-align: center;
+  text-align: center !important;
+  h1{
+    text-align: center !important;
+    color: grey;
+  }
 }
 
 .modal.fade {
@@ -426,31 +432,32 @@ label.checkbox-label{
 
 .modal-header {
   padding: 9px 15px;
-  background: #000000;
-  border-bottom: 1px solid #2a2a2a;
+  background: #fddc03;
+  border-bottom: 1px solid #fddc03;
 }
 
 .modal-header .close {
   margin-top: 2px;
   float: right;
-  background: #1b1b1b;
+  background: #fddc03;
   border: none;
-  color: #ffffff;
-  border-bottom: 1px solid #2a2a2a;
-  border-right: 1px solid #2a2a2a;
-  border-top: 1px solid #000000;
-  border-bottom: 1px solid #000000;
+  color: #8d86c0;
+  border-bottom: 1px solid #fddc03;
+  border-right: 1px solid #fddc03;
+  border-top: 1px solid #fddc03;
+  border-bottom: 1px solid #fddc03;
   font-size: 18px;
   cursor: pointer;
 }
 
 .modal-header .close:hover {
-  background: #2b2b2b;
+  background: #fddc03;
 }
 
 .modal-header h3 {
   margin: 0;
   line-height: 30px;
+  color: #8d86c0;
 }
 .modal-body {
   position: relative;
@@ -458,7 +465,7 @@ label.checkbox-label{
   max-height: 400px;
   padding: 15px;
   padding-top:0;
-  background: #1b1b1b;
+  background: #fff;
 }
 .modal-form {
   margin-bottom: 0;
@@ -468,12 +475,12 @@ label.checkbox-label{
   margin-bottom: 0;
   font-size:70%;
   text-align: right;
-  background-color: #000000;
-  border-top: 1px solid #2a2a2a;
+  background-color: #fddc03;
+  border-top: 1px solid #fddc03;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-
+  color: grey;
   *zoom: 1;
 }
 .modal-footer:before,
@@ -507,13 +514,13 @@ label.checkbox-label{
   margin: -3px;
   border-width: 3px;
   border-style: dashed;
-  color: whitesmoke;
+  color: grey;
 }
 .drag.state-active{
   border-color: grey;
 }
 .drag.state-hover{
-  border-color: whitesmoke;
+  border-color: grey;
 }
 .ui-draggable{
   cursor:move;
@@ -532,7 +539,8 @@ label.checkbox-label{
   font-family: monospace;
   font-weight:bold;
   margin-top: -12pt;
-  text-shadow: 1px 1px 2px #000000;
+  // text-shadow: 1px 1px 2px #000000;
+  color: #8d86c0;
   filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
@@ -655,4 +663,85 @@ h2{
     color: black;
   }
 
+}
+
+// Pinmanager
+
+#pin-manager{
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  h1{
+    color: black;
+  }
+}
+
+#search-wrapper{
+  margin: 20px auto;
+  #search-form{
+    width: 100%;
+    display: inline;
+    input[type='text']{
+      width: 78%;
+      font-size: 18px;
+      padding: 5px;
+    }
+    input[type='submit']{
+      width: 20%;
+    }
+  }
+}
+
+#will{
+  margin: 20px auto;
+  text-align: center;
+  .pagination{
+    color: black;
+  }
+}
+
+// login
+#login, #register, #edit-reg{
+  background-color: white;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 50px auto;
+  color: black;
+  h2{
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    max-width: 600px;
+  }
+  form{
+    margin: 0 auto;
+    max-width: 600px;
+    input{
+      width: 100%;
+    }
+  }
+  input[type="submit"]{
+    float: none !important;
+  }
+  input[type="checkbox"]{
+    width: 20px;
+  }
+  input{
+    margin-bottom: 10px;
+  }
+  #devise-links{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    max-width: 600px;
+  }
+}
+
+#logout-float{
+  position: absolute;
+  left: 0;
+  top: 0;
 }

@@ -1,3 +1,8 @@
+<% if user_signed_in? %>
+  <div id="logout-float">
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  </div>
+<% end %>
   <!-- START COPY -->
 <div id="white-bg"></div>
 <div id="yellow-bg"></div>
@@ -5,9 +10,10 @@
   <!--    container    -->
   <div id="main-body" style="text-align:left;">
     <div class="container">
-      <div class="banner">
+      <div class="banner" onload="stickyScroll();">
         <a class="banner-link" href="http://www.rollouttheribbons.com/" target="_blank">&nbsp;</a>
       </div>
+      <div id="sticky-search"></div>
       <div class="searchbar">
         <div class="searchbar-contents">
           <a class="pull-right" href="https://ssl.charityweb.net/monmouthfoundation/rollouttheribbons.htm" target="_blank"><div class="donate"></div></a>
