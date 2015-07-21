@@ -38,7 +38,7 @@ img{
   position: absolute;
   left: 50%;
   margin-left: -437px;
-  z-index: 1;
+  z-index:  1;
   -moz-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
   box-shadow: 0px 0px 50px rgba(0,0,0,0.4);
@@ -60,8 +60,7 @@ img{
   text-align:right
 }
 
-.container{
-  padding-bottom:100px;
+.container{  
   width: 810px;
   overflow:hidden;
   margin: 0 auto;
@@ -165,10 +164,8 @@ img{
   bottom: 0;
   z-index:999;
   height: 105px;
-
   width: 790px;
   padding: 0 10px 10px 10px;
-
   background-color:#fff;
   background-repeat:no-repeat;
   /*background-image:url(/ci/assets/js/custom_tab_scripts/pindrop/img/footer.png);*/
@@ -745,4 +742,17 @@ h2{
   position: absolute;
   left: 0;
   top: 0;
+}
+
+@media (max-width: 810px){
+  body, html{
+    background-color: white;
+  }
+  #yellow-bg{
+    display: none;
+  }
+}
+
+#the-wrap, .container{
+  height: 100% !important;
 }
