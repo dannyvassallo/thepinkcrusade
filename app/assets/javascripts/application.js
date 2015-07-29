@@ -16,4 +16,4 @@
 //= require jquery.ui.touch-punch
 //= require jquery-scrolltofixed
 //= require unobtrusive_flash
-
+//= require pins
