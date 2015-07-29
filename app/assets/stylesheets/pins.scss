@@ -2,7 +2,7 @@ html, body{
   background: black;
   height: 100% !important;
   overflow-y: scroll;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 body{
@@ -753,6 +753,6 @@ h2{
   }
 }
 
-#the-wrap, .container{
+.container{
   height: 100% !important;
 }
