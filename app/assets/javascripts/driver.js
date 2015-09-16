@@ -68,7 +68,7 @@ Mark Allen
       });
     }
 
-    var promo_link    = "http://fngt.it/Thepinkcrusade15";
+    var promo_link    = page_promo_link;
 
     var share_args    = {
       'utm_campaign': "TPC",
