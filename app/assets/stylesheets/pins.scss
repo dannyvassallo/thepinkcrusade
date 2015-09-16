@@ -66,6 +66,14 @@ img{
   background-repeat: no-repeat;
 }
 
+.banner-barnabas{
+  width:810px;
+  height:200px;
+  background: url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/barnabas-health-header.png');
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
 .banner-link{
   width: 300px;
   display: block;
@@ -745,7 +753,7 @@ h2{
 
 #the-wrap, .container{
   height: 100% !important;
-  min-height: 950px !important;  
+  // min-height: 950px !important;  
 }
 
 #the-wrap .container{
