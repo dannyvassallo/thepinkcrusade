@@ -14,7 +14,8 @@ rails s
 
 ###Embed The Widget
 ```
-<iframe width="810px" height="950px" src="..."></iframe>
+<style>iframe#tpc-widget {height:850px;width:810px;overflow:hidden;border:none;}</style>
+<iframe id="tpc-widget" src="..."></iframe>
 ```
 
 #### Different App Landings
