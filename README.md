@@ -12,3 +12,7 @@ rake db:migrate
 rails s
 ```
 
+###Embed The Widget
+```
+<iframe width="810px" height="950px" src="..."></iframe>
+```
