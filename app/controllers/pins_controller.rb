@@ -3,16 +3,38 @@ class PinsController < ApplicationController
   # skip_before_action :verify_authenticity_token
   respond_to :html, :js
 
-  def index
+  def sbmc
     @pins = Pin.all
     respond_to do |format|
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"rotr15-pins-list\""
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
   end
+
+  def sbmc_ipad
+    @pins = Pin.all
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
+  end  
+
+  def barnabas_health
+    @pins = Pin.all
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
+  end  
 
   def manage_pins
     @pins = Pin.all

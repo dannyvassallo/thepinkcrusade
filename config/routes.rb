@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :pins
   resources :pinmanager
   resources :status, only: [:index]
-  root to: 'pins#index'
+  root to: 'pins#sbmc'
+  get 'sbmc-ipad' => 'pins#sbmc_ipad'
+  get 'sbmc' => 'pins#sbmc'  
+  get 'barnabas-health' => 'pins#barnabas_health'
 
 
   namespace :api do
