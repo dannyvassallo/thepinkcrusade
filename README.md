@@ -22,16 +22,23 @@ rails s
 
 SBMC(current landing page)
 ```
-http://localhost:3000/
-http://localhost:3000/sbmc
-```
-
-SBMC Ipad Version(Lite)
-```
-http://localhost:3000/sbmc-ipad
+http://fngt.it/Thepinkcrusade15
+http://fngt.it/Thepinkcrusade15SBMC
+http://fngt.it/Thepinkcrusade15SBMC/f
+http://fngt.it/Thepinkcrusade15SBMC/t
+https://thepinkcrusade.herokuapp.com/
+https://thepinkcrusade.herokuapp.com/sbmc
 ```
 
 Barnabas Health
 ```
-http://localhost:3000/barnabas-health
+http://fngt.it/Thepinkcrusade15BH
+http://fngt.it/Thepinkcrusade15BH/f
+http://fngt.it/Thepinkcrusade15BH/t
+https://thepinkcrusade.herokuapp.com/barnabas-health
+```
+
+SBMC Ipad Version(Lite)
+```
+https://thepinkcrusade.herokuapp.com/sbmc-ipad
 ```
