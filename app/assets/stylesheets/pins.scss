@@ -286,11 +286,11 @@ input[type='agree']{
 }
 
 input[type='submit']{
-  background: #8d86c0;
-  border-top: 1px solid #8d86c0;
-  border-left: 1px solid #8d86c0;
-  border-bottom: 1px solid #8d86c0;
-  border-right: 1px solid #8d86c0;
+  background: #f23694;
+  border-top: 1px solid #f23694;
+  border-left: 1px solid #f23694;
+  border-bottom: 1px solid #f23694;
+  border-right: 1px solid #f23694;
   color: #ffffff;
   // text-shadow: 1px 1px 1px #333;
   font-size: 18px;
@@ -420,32 +420,32 @@ label.checkbox-label{
 
 .modal-header {
   padding: 9px 15px;
-  background: #fddc03;
-  border-bottom: 1px solid #fddc03;
+  background: #f23694;
+  border-bottom: 1px solid #f23694;
 }
 
 .modal-header .close {
   margin-top: 2px;
   float: right;
-  background: #fddc03;
+  background: #f23694;
   border: none;
-  color: #8d86c0;
-  border-bottom: 1px solid #fddc03;
-  border-right: 1px solid #fddc03;
-  border-top: 1px solid #fddc03;
-  border-bottom: 1px solid #fddc03;
+  color: #fff;
+  border-bottom: 1px solid #f23694;
+  border-right: 1px solid #f23694;
+  border-top: 1px solid #f23694;
+  border-bottom: 1px solid #f23694;
   font-size: 18px;
   cursor: pointer;
 }
 
 .modal-header .close:hover {
-  background: #fddc03;
+  background: #f23694;
 }
 
 .modal-header h3 {
   margin: 0;
   line-height: 30px;
-  color: #8d86c0;
+  color: #fff;
 }
 .modal-body {
   position: relative;
@@ -463,12 +463,12 @@ label.checkbox-label{
   margin-bottom: 0;
   font-size:70%;
   text-align: right;
-  background-color: #fddc03;
-  border-top: 1px solid #fddc03;
+  background-color: #f23694;
+  border-top: 1px solid #f23694;
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
-  color: grey;
+  color: #fff;
   *zoom: 1;
 }
 .modal-footer:before,
