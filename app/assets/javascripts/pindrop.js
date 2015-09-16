@@ -6,7 +6,7 @@ Mark Allen
 
 (function($,doc){
   var promo_objects = [];
-  var myfangate_url = "//rotr15.herokuapp.com/"; // "//myfangate.com/ci/";
+  var myfangate_url = "/"; // "//myfangate.com/ci/";
   // console.log(myfangate_url);
   var PinPromo = {
     'oops'    : function(msg){
@@ -239,7 +239,7 @@ Mark Allen
     var o={
       "promo_id"      : null,
       "pins"          : null,
-      "pin_img"       : "//s3.amazonaws.com/myfangate.com/rotr/img/ribbon-small.png",
+      "pin_img"       : "https://s3.amazonaws.com/myfangate.com/pinkcrusade/img/ribbon-small.png",
       "start_open"    : null,
       "debug"         : true,
       "ga_category"   : "pindrop",

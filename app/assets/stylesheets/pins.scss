@@ -11,7 +11,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: #ffffff;
   // overflow-x:hidden;
-  background-image: url('https://s3.amazonaws.com/myfangate.com/rotr15/repeatingbg.png');
+  background-image: url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/crossword.png');
   background-repeat: repeat;
 }
 
@@ -19,22 +19,11 @@ img{
   max-width:100%;
 }
 
-#white-bg{
-  width: 810px;
-  height: 100%;
-  margin: 0 auto;
-  background-color: white;
-  position: absolute;
-  left: 50%;
-  margin-left: -405px;
-  z-index: 2;
-}
-
-#yellow-bg{
+#pink-border{
   width: 860px;
   height: 100%;
   margin: 0 auto;
-  background-color: #fddc03;
+  background-color: #fcebf3;
   position: absolute;
   left: 50%;
   margin-left: -430px;
@@ -69,17 +58,19 @@ img{
   z-index: 3;
 }
 
-.banner{
+.banner-sbmc{
   width:810px;
-  height:350px;
-  background: url('https://s3.amazonaws.com/myfangate.com/rotr15/rotr15-header.png');
+  height:200px;
+  background: url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2014SBMC/img/accheader.png');
   background-size:contain;
+  background-repeat: no-repeat;
 }
 
 .banner-link{
   width: 300px;
   display: block;
   height: 300px;
+  text-decoration: none;
 }
 
 .searchbar{
@@ -87,7 +78,7 @@ img{
   height: 60px;
   left: auto;
   background-color: rgba(0, 0, 0, 0);
-  top: 290px;
+  top: 144px;
   padding: 0 !important;
   width: 810px;
   z-index: 99;
@@ -97,7 +88,7 @@ img{
   width: 790px;
 }
 .donate{
-  background-image:url('https://s3.amazonaws.com/myfangate.com/rotr15/donate.png');
+  background-image:url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/mammogram.png');
   background-repeat:no-repeat;
   width:163px;
   height:39px;
@@ -122,21 +113,20 @@ img{
 .steps .steps-image{
   display:block;
   height:54px;
-  background:url('https://s3.amazonaws.com/myfangate.com/rotr15/steps.png') no-repeat top center;
+  margin-top: 10px;
+  background:url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/steps.png') no-repeat top center;
 }
 .searchfield{
-  height: 35px;
-  background: none;
-  border: none;
-  width:100%;
-  font-size: 32px;
-  line-height: 32px;
-  /*color: #666;*/
-  color:#8d86c0 !important;
-  font-weight: bold;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #666;
-  border-bottom: none;
+    height: 35px;        
+    width: 100%;
+    font-size: 32px;
+    line-height: 32px;    
+    color: #666 !important;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #666;
+    border-bottom: none;
+    margin-top: -8px;
 }
 
 .searchfield:focus{
@@ -145,11 +135,11 @@ img{
 }
 
 .background{
-  background: url('https://s3.amazonaws.com/myfangate.com/rotr15/chicken-wire.png') no-repeat;
+  background: url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/fence.png') no-repeat;
   height: 514px;
   overflow:hidden;
   padding:0 10px;
-  position: relative;
+  position: relative;  
 }
 
 .drag{
@@ -167,8 +157,8 @@ img{
   width: 790px;
   padding: 0 10px 10px 10px;
   background-color:#fff;
-  background-repeat:no-repeat;
-  /*background-image:url(/ci/assets/js/custom_tab_scripts/pindrop/img/footer.png);*/
+  background-repeat: repeat-y;
+  background-image:url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/repeatingstripes.png');
   /*border-top: 1px solid #1b1b1b;*/
 }
 
@@ -538,7 +528,7 @@ label.checkbox-label{
   font-weight:bold;
   margin-top: -12pt;
   // text-shadow: 1px 1px 2px #000000;
-  color: #8d86c0;
+  color: #f23694;
   filter: dropshadow(color=#000000, offx=1, offy=1);
 }
 
@@ -744,16 +734,25 @@ h2{
   top: 0;
 }
 
-@media (max-width: 810px){
+@media (max-width: 1170px){
   body, html{
     background-color: white;
   }
-  #yellow-bg{
+  #pink-border{
     display: none;
   }
 }
 
 #the-wrap, .container{
   height: 100% !important;
-  min-height: 950px !important;
+  min-height: 950px !important;  
+}
+
+#the-wrap .container{
+  background-image: url('https://s3.amazonaws.com/myfangate.com/pinkcrusade2015/repeatingstripes.png');
+  background-repeat: repeat-y;
+}
+
+.search-icon{
+  margin-top: -5px;
 }

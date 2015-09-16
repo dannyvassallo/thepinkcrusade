@@ -71,7 +71,7 @@ Mark Allen
     var promo_link    = "http://fngt.it/RollOutTheRibbons15";
 
     var share_args    = {
-      'utm_campaign': "ROR",
+      'utm_campaign': "TPC",
       'utm_medium'  : "share",
       'utm_content' : "",
       'utm_source'  : ""
