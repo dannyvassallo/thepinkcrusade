@@ -68,10 +68,10 @@ Mark Allen
       });
     }
 
-    var promo_link    = "http://fngt.it/RollOutTheRibbons15";
+    var promo_link    = "http://fngt.it/Thepinkcrusade15";
 
     var share_args    = {
-      'utm_campaign': "ROR",
+      'utm_campaign': "TPC",
       'utm_medium'  : "share",
       'utm_content' : "",
       'utm_source'  : ""
@@ -140,7 +140,7 @@ Mark Allen
             link        : share_link,
             //display     : "popup",
             caption     : "Barnabas Health",
-            description : "To raise cancer awareness, Roll Out The Ribbons is giving people an opportunity to dedicate and post ribbons. Dedicate your ribbon today!"
+            description : "To raise breast cancer awareness, The Pink Crusade is giving people an opportunity to dedicate and post ribbons.  Dedicate your ribbon today!"
           },function(d){
             if(d && d['post_id'])
               track_social('facebook');
@@ -151,10 +151,10 @@ Mark Allen
           // e.preventDefault();
           clicked.twitterBtn({
             url     : share_link,
-            text    : mine ?  "I just dedicated my ribbon to help raise cancer awareness via @RollOutTheRibbons #RollOutTheRibbons" :
-                              "I just shared a ribbon to help raise cancer awareness via @RollOutTheRibbons #RollOutTheRibbons",
+            text    : mine ?  "I just dedicated my ribbon to help raise breast cancer awareness via @ThePinkCrusade #ThePinkCrusade" :
+                              "I just shared a ribbon to help raise breast cancer awareness via @ThePinkCrusade #ThePinkCrusade",
             related : {
-              "RollOutRibbons"  : "Follow us!",
+              "ThePinkCrusade"  : "Follow us!",
               "barnabas_health" : "Follow Barnbas Health"
             }
           });

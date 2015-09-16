@@ -8,11 +8,23 @@ class PinsController < ApplicationController
     respond_to do |format|
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"rotr15-pins-list\""
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
   end
+
+  def sbmc
+    @pins = Pin.all
+  end
+
+  def sbmc_ipad
+    @pins = Pin.all
+  end  
+
+  def barnabas_health
+    @pins = Pin.all
+  end  
 
   def manage_pins
     @pins = Pin.all
