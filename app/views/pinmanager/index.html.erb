@@ -3,8 +3,10 @@
 
   <% if user_signed_in? %>
     <div id="admin-nav">
-      <%= link_to('Homepage',root_path) %>
-      <%= link_to 'Download CSV list', pins_path(format: :csv) %>
+      <%= link_to('SBMC App',sbmc_path) %>
+      <%= link_to('iPad App',sbmc_ipad_path) %>
+      <%= link_to('Barnabas Health App',barnabas_health_path) %>
+      <%= link_to 'Download CSV list', pins_path(params.merge(format: :csv)) %>      
       <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
     </div>
   <% end %>
@@ -28,6 +30,7 @@
         <td>Can Email:</td>
         <td>Comment:</td>
         <td>Zip Code:</td>
+        <td>App Name:</td>
         <td>Delete:</td>
       </tr>
     <% @pins.each do |pin| %>
@@ -39,6 +42,7 @@
         <td><%= pin.pin_can_email %></td>
         <td><%= pin.pin_comment %></td>
         <td><%= pin.pin_zip %></td>
+        <td><%= pin.pin_app_name %></td>
         <td><%= button_to 'REMOVE PIN', pin, method: :delete, data: {confirm: "Do you really want to delete the pin from #{pin.pin_first_name}, created at #{pin.created_at}?"}, :class => 'remove-btn' %></td>
       </tr>
     <% end %>

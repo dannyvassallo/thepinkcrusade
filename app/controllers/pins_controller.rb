@@ -4,7 +4,11 @@ class PinsController < ApplicationController
   respond_to :html, :js
 
   def index
-    @pins = Pin.all
+    if params[:search]
+      @pins = Pin.search(params[:search]).order("created_at DESC")
+    else
+      @posts = Pin.all.order('created_at DESC')
+    end
     respond_to do |format|
       format.html
       format.csv do
@@ -63,7 +67,7 @@ class PinsController < ApplicationController
   private
 
   def pin_params
-    params.require(:pin).permit(:pin_pin_promo_fk, :pin_comment, :pin_first_name, :pin_last_name, :pin_email, :pin_zip, :pin_x, :pin_y, :pin_can_email)
+    params.require(:pin).permit(:pin_pin_promo_fk, :pin_comment, :pin_first_name, :pin_last_name, :pin_email, :pin_zip, :pin_x, :pin_y, :pin_can_email, :pin_app_name)
   end
 
 end
