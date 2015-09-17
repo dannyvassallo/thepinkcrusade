@@ -7,12 +7,16 @@ class PinsController < ApplicationController
     if params[:search]
       @pins = Pin.search(params[:search]).order("created_at DESC")
     else
-      @posts = Pin.all.order('created_at DESC')
+      @pins = Pin.all.order('created_at DESC')
     end
     respond_to do |format|
+      now = DateTime.now.utc
+      now = now.in_time_zone('Eastern Time (US & Canada)')      
+      day_and_month = now.strftime("%m-%d")
+      time = now.strftime('%I%M')
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list\""
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list-#{day_and_month}-#{time}\""
         headers['Content-Type'] ||= 'text/csv'
       end
     end
