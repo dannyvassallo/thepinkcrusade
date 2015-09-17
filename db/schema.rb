@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150917142520) do
     t.boolean  "pin_can_email"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "app_name"
+    t.string   "pin_app_name"
   end
 
   create_table "users", force: :cascade do |t|

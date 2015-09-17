@@ -40,7 +40,7 @@
         <td><%= pin.pin_can_email %></td>
         <td><%= pin.pin_comment %></td>
         <td><%= pin.pin_zip %></td>
-        <td><%= pin.app_name %></td>
+        <td><%= pin.pin_app_name %></td>
         <td><%= button_to 'REMOVE PIN', pin, method: :delete, data: {confirm: "Do you really want to delete the pin from #{pin.pin_first_name}, created at #{pin.created_at}?"}, :class => 'remove-btn' %></td>
       </tr>
     <% end %>

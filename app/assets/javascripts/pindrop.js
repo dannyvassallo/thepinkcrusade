@@ -83,7 +83,8 @@ Mark Allen
             pin_last_name     : null,
             pin_first_name    : null,
             pin_comment       : null,
-            pin_event_code    : null
+            pin_event_code    : null,
+            pin_app_name    : null,
           }
           return $.extend(d,pin);
         },
