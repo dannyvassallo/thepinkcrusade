@@ -18,6 +18,8 @@
 
 # Ignore application configuration
 /config/application.yml
+/config/application.production.yml
 
 #ignore figaro variables
 /config/application.yml
+/config/application.production.yml
