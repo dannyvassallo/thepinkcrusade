@@ -4,7 +4,11 @@ class PinsController < ApplicationController
   respond_to :html, :js
 
   def index
-    @pins = Pin.all
+    if params[:search]
+      @pins = Pin.search(params[:search]).order("created_at DESC")
+    else
+      @posts = Pin.all.order('created_at DESC')
+    end
     respond_to do |format|
       format.html
       format.csv do
