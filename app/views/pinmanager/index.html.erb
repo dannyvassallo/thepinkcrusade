@@ -3,7 +3,9 @@
 
   <% if user_signed_in? %>
     <div id="admin-nav">
-      <%= link_to('Homepage',root_path) %>
+      <%= link_to('SBMC App',sbmc_path) %>
+      <%= link_to('iPad App',sbmc_ipad_path) %>
+      <%= link_to('Barnabas Health App',barnabas_health_path) %>
       <%= link_to 'Download CSV list', pins_path(params.merge(format: :csv)) %>      
       <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
     </div>
