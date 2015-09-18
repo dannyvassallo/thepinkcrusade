@@ -43,7 +43,7 @@ Mark Allen
           if(!window._gaq)  return false;
           value           = value             || 1;
           noninteraction  = noninteraction    || false;
-          window._gaq.push(["_trackEvent", o.ga_category, action, label, value, noninteraction]);
+          ga('send', 'event', o.ga_category, action, label, value, noninteraction);
           return true;
         },
         'track_error' : function(action, label){
