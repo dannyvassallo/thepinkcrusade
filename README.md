@@ -15,7 +15,7 @@ rails s
 ###Embed The Widget
 ```
 <style>iframe#tpc-widget {height:850px;width:810px;overflow:hidden;border:none;}</style>
-<iframe id="tpc-widget" src="..."></iframe>
+<iframe id="tpc-widget" src="https://thepinkcrusade.herokuapp.com/sbmc"></iframe>
 ```
 
 #### Different App Landings
