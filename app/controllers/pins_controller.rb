@@ -16,7 +16,7 @@ class PinsController < ApplicationController
       time = now.strftime('%I%M')
       format.html
       format.csv do
-        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list-#{day_and_month}-#{time}\""
+        headers['Content-Disposition'] = "attachment; filename=\"pinkcrusade-15-pins-list-#{day_and_month}-#{time}\".csv"
         headers['Content-Type'] ||= 'text/csv'
       end
     end
