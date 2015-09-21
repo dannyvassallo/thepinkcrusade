@@ -151,8 +151,8 @@ Mark Allen
           // e.preventDefault();
           clicked.twitterBtn({
             url     : share_link,
-            text    : mine ?  "I just dedicated my ribbon to help raise breast cancer awareness via @ThePinkCrusade #ThePinkCrusade" :
-                              "I just shared a ribbon to help raise breast cancer awareness via @ThePinkCrusade #ThePinkCrusade",
+            text    : mine ?  "I just dedicated my ribbon to help raise breast cancer awareness via @Barnabas_health #ThePinkCrusade" :
+                              "I just shared a ribbon to help raise breast cancer awareness via @Barnabas_health #ThePinkCrusade",
             related : {
               "ThePinkCrusade"  : "Follow us!",
               "barnabas_health" : "Follow Barnbas Health"
