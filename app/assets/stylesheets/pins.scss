@@ -66,6 +66,10 @@ img{
   background-repeat: no-repeat;
 }
 
+.banner-ipad{
+  display: none;
+}
+
 .banner-barnabas{
   width:810px;
   height:200px;
@@ -80,7 +84,15 @@ img{
   height: 300px;
   text-decoration: none;
 }
-
+.searchbar-ipad{
+  position: fixed;
+  height: 60px;
+  left: auto;
+  background-color: rgba(0, 0, 0, 0);  
+  padding: 0 !important;
+  width: 810px;
+  z-index: 99;
+}
 .searchbar{
   position: absolute;
   height: 60px;
