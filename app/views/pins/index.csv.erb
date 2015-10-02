@@ -1,4 +1,4 @@
-<%- headers = ['ID', 'First Name', 'Last Name', 'Email', 'Can Email', 'Comment', 'Zip Code', 'DOB','App Name', 'Created At'] -%>
+<%- headers = ['Pin ID', 'First Name', 'Last Name', 'Email', 'Can Email', 'Comment', 'Zip Code', 'DOB','App Name', 'Created At'] -%>
 <%= CSV.generate_line headers %>
 <%- @pins.each do |pin| -%>	
 	<%= CSV.generate_line([pin.id, pin.pin_first_name, pin.pin_last_name, pin.pin_email, pin.pin_can_email, pin.pin_comment, pin.pin_zip, pin.pin_dob, pin.pin_app_name, pin.created_at.in_time_zone('Eastern Time (US & Canada)')]) %>
