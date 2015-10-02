@@ -2,5 +2,5 @@
 <%= CSV.generate_line headers %>
 <%- @pins.each do |pin| -%>	
 	<% comment = pin.pin_comment.gsub(/\,/,"") %>	
-	<%= CSV.generate_line([pin.id, pin.pin_first_name, pin.pin_last_name, pin.pin_email, pin.pin_can_email,comment, pin.pin_zip, pin.pin_dob, pin.pin_app_name, pin.created_at.in_time_zone('Eastern Time (US & Canada)')]) %>
+	<%= CSV.generate_line([pin.id, pin.pin_first_name, pin.pin_last_name, pin.pin_email, pin.pin_can_email,comment, pin.pin_zip, pin.pin_dob, pin.pin_app_name, pin.created_at]) %>
 <%- end -%>
