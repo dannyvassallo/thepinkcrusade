@@ -6,7 +6,8 @@ Mark Allen
 
 (function($,doc){
   var promo_objects = [];
-  var myfangate_url = "/"; // "//myfangate.com/ci/";
+  var the_url = window.location.host;
+  var myfangate_url = "https://"+the_url; // "//myfangate.com/ci/";
   // console.log(myfangate_url);
   var PinPromo = {
     'oops'    : function(msg){
