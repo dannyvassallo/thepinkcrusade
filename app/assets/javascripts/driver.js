@@ -113,7 +113,9 @@ Mark Allen
       promo.track_event("social_share#" + (mine ? "own" : "other"), "post#" + social);
     }
 
-    if (twttr != undefined){
+    if (typeof twttr === "undefined"){
+      // do nothing
+    } else {
       twttr.events.bind('tweet', function(event){
         track_social('twitter');
       });
