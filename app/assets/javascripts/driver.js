@@ -113,9 +113,13 @@ Mark Allen
       promo.track_event("social_share#" + (mine ? "own" : "other"), "post#" + social);
     }
 
-    twttr.events.bind('tweet', function(event){
-      track_social('twitter');
-    });
+    if (typeof twttr === "undefined"){
+      // do nothing
+    } else {
+      twttr.events.bind('tweet', function(event){
+        track_social('twitter');
+      });
+    }
 
     var popup_share = function(clicked, pin, e){
       var social  = clicked.attr("data-social");
